@@ -15,6 +15,7 @@ import java.util.Map;
  * @author Phong
  */
 public class BookCollection implements I_Collection<Book> {
+
     private Map<String, Book> books;
 
     public BookCollection() {

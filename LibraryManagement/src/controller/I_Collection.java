@@ -12,9 +12,14 @@ import java.util.Map;
  * @author Phong
  */
 public interface I_Collection<T> {
+
     void add(T item);
+
     void update(T item);
+
     void delete(String id);
+
     T getById(String id);
+
     List<T> getAll();
 }

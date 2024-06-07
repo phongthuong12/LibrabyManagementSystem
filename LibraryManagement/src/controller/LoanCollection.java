@@ -14,10 +14,11 @@ import model.Loan;
  *
  * @author Phong
  */
-public class LoanCollection implements I_Collection<Loan>{
+public class LoanCollection implements I_Collection<Loan> {
+
     private Map<String, Loan> loans;
-    
-    public LoanCollection(){
+
+    public LoanCollection() {
         loans = new HashMap<>();
     }
 
@@ -35,16 +36,16 @@ public class LoanCollection implements I_Collection<Loan>{
 
     @Override
     public void delete(String id) {
-loans.remove(id);
+        loans.remove(id);
     }
 
     @Override
     public Loan getById(String id) {
-return loans.get(id);    
+        return loans.get(id);
     }
 
     @Override
     public List<Loan> getAll() {
-return new ArrayList<>(loans.values());    
+        return new ArrayList<>(loans.values());
     }
 }

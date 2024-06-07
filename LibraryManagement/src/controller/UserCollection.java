@@ -14,10 +14,11 @@ import model.User;
  *
  * @author Phong
  */
-public class UserCollection implements I_Collection<User>{
+public class UserCollection implements I_Collection<User> {
+
     private Map<String, User> users;
-    
-    public UserCollection(){
+
+    public UserCollection() {
         users = new HashMap<>();
     }
 
@@ -49,11 +50,12 @@ public class UserCollection implements I_Collection<User>{
 
     @Override
     public List<User> getAll() {
-List<User> activeUsers = new ArrayList<>();
+        List<User> activeUsers = new ArrayList<>();
         for (User user : users.values()) {
             if (user.isActiveUser()) {
                 activeUsers.add(user);
             }
         }
-        return activeUsers;    }
+        return activeUsers;
+    }
 }
