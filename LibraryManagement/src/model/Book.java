@@ -10,7 +10,8 @@ import java.io.Serializable;
  *
  * @author Phong
  */
-public class Book implements Serializable{
+public class Book implements Serializable {
+
     private String bookId;
     private String bookTitle;
     private String author;
@@ -77,9 +78,9 @@ public class Book implements Serializable{
 
     @Override
     public String toString() {
-        return "Book [bookId=" + bookId + ", title=" + bookTitle + ", author=" + author +
-               ", publicationYear=" + publicationYear + ", publisher=" + publisher + 
-               ", activeBook=" + activeBook + "]";
+        return "Book [bookId=" + bookId + ", title=" + bookTitle + ", author=" + author
+                + ", publicationYear=" + publicationYear + ", publisher=" + publisher
+                + ", activeBook=" + activeBook + "]";
     }
-    
+
 }

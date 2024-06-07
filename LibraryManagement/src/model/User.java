@@ -11,7 +11,8 @@ import java.util.Date;
  *
  * @author Phong
  */
-public class User implements Serializable{
+public class User implements Serializable {
+
     private String userId;
     private String userName;
     private Date dateOfBirth;
@@ -75,10 +76,10 @@ public class User implements Serializable{
     public void setActiveUser(boolean activeUser) {
         this.activeUser = activeUser;
     }
-    
+
     @Override
     public String toString() {
-        return "User [userId=" + userId + ", name=" + userName + ", dateOfBirth=" + dateOfBirth + 
-               ", phoneNumber=" + phoneNumber + ", email=" + email + ", activeUser=" + activeUser + "]";
+        return "User [userId=" + userId + ", name=" + userName + ", dateOfBirth=" + dateOfBirth
+                + ", phoneNumber=" + phoneNumber + ", email=" + email + ", activeUser=" + activeUser + "]";
     }
 }

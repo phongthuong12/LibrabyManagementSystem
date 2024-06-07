@@ -11,7 +11,8 @@ import java.util.Date;
  *
  * @author Phong
  */
-public class Loan implements Serializable{
+public class Loan implements Serializable {
+
     private String loadId;
     private String bookId;
     private String userId;
@@ -65,10 +66,10 @@ public class Loan implements Serializable{
     public void setReturnDate(Date returnDate) {
         this.returnDate = returnDate;
     }
-    
+
     @Override
     public String toString() {
-        return "Loan [loadId=" + loadId + ", bookId=" + bookId + 
-               ", userId=" + userId + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + "]";
+        return "Loan [loadId=" + loadId + ", bookId=" + bookId
+                + ", userId=" + userId + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + "]";
     }
 }
