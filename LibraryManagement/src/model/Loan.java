@@ -13,26 +13,26 @@ import java.util.Date;
  */
 public class Loan implements Serializable {
 
-    private String loadId;
+    private String loanId;
     private String bookId;
     private String userId;
     private Date borrowDate;
     private Date returnDate;
 
-    public Loan(String loadId, String bookId, String userId, Date borrowDate, Date returnDate) {
-        this.loadId = loadId;
+    public Loan(String loanId, String bookId, String userId, Date borrowDate, Date returnDate) {
+        this.loanId = loanId;
         this.bookId = bookId;
         this.userId = userId;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
     }
 
-    public String getLoadId() {
-        return loadId;
+    public String getLoanId() {
+        return loanId;
     }
 
-    public void setLoadId(String loadId) {
-        this.loadId = loadId;
+    public void setLoadId(String loanId) {
+        this.loanId = loanId;
     }
 
     public String getBookId() {
@@ -69,7 +69,7 @@ public class Loan implements Serializable {
 
     @Override
     public String toString() {
-        return "Loan [loadId=" + loadId + ", bookId=" + bookId
+        return "Loan [loanId=" + loanId + ", bookId=" + bookId
                 + ", userId=" + userId + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + "]";
     }
 }
