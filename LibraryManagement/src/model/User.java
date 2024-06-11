@@ -13,36 +13,36 @@ import java.util.Date;
  */
 public class User implements Serializable {
 
-    private String userId;
-    private String userName;
+    private String studentId;
+    private String studentFullName;
     private Date dateOfBirth;
     private String phoneNumber;
     private String email;
     private boolean activeUser;
 
-    public User(String userId, String userName, Date dateOfBirth, String phoneNumber, String email, boolean activeUser) {
-        this.userId = userId;
-        this.userName = userName;
+    public User(String studentId, String studentFullName, Date dateOfBirth, String phoneNumber, String email, boolean activeUser) {
+        this.studentId = studentId;
+        this.studentFullName = studentFullName;
         this.dateOfBirth = dateOfBirth;
         this.phoneNumber = phoneNumber;
         this.email = email;
         this.activeUser = activeUser;
     }
 
-    public String getUserId() {
-        return userId;
+    public String getStudenId() {
+        return studentId;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setStudentId(String studentId) {
+        this.studentId = studentId;
     }
 
-    public String getUserName() {
-        return userName;
+    public String getStudentFullName() {
+        return studentFullName;
     }
 
-    public void setUserName(String userName) {
-        this.userName = userName;
+    public void setStudentFullName(String studentFullName) {
+        this.studentFullName = studentFullName;
     }
 
     public Date getDateOfBirth() {
@@ -79,7 +79,7 @@ public class User implements Serializable {
 
     @Override
     public String toString() {
-        return "User [userId=" + userId + ", name=" + userName + ", dateOfBirth=" + dateOfBirth
+        return "User [studentId=" + studentId + ", name=" + studentFullName + ", dateOfBirth=" + dateOfBirth
                 + ", phoneNumber=" + phoneNumber + ", email=" + email + ", activeUser=" + activeUser + "]";
     }
 }

@@ -24,13 +24,13 @@ public class UserCollection implements I_Collection<User> {
 
     @Override
     public void add(User user) {
-        users.put(user.getUserId(), user);
+        users.put(user.getStudenId(), user);
     }
 
     @Override
     public void update(User user) {
-        if (users.containsKey(user.getUserId())) {
-            users.put(user.getUserId(), user);
+        if (users.containsKey(user.getStudenId())) {
+            users.put(user.getStudenId(), user);
         }
     }
 

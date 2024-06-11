@@ -24,13 +24,13 @@ public class LoanCollection implements I_Collection<Loan> {
 
     @Override
     public void add(Loan loan) {
-        loans.put(loan.getLoanId(), loan);
+        loans.put(loan.getTransactionId(), loan);
     }
 
     @Override
     public void update(Loan loan) {
-        if (loans.containsKey(loan.getLoanId())) {
-            loans.put(loan.getLoanId(), loan);
+        if (loans.containsKey(loan.getTransactionId())) {
+            loans.put(loan.getTransactionId(), loan);
         }
     }
 

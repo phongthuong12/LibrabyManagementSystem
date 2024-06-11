@@ -13,42 +13,42 @@ import java.util.Date;
  */
 public class Loan implements Serializable {
 
-    private String loanId;
-    private String bookId;
-    private String userId;
+    private String transactionId;
+    private Book book;
+    private User user;
     private Date borrowDate;
     private Date returnDate;
 
-    public Loan(String loanId, String bookId, String userId, Date borrowDate, Date returnDate) {
-        this.loanId = loanId;
-        this.bookId = bookId;
-        this.userId = userId;
+    public Loan(String transactionId, Book book, User user, Date borrowDate, Date returnDate) {
+        this.transactionId = transactionId;
+        this.book = book;
+        this.user = user;
         this.borrowDate = borrowDate;
         this.returnDate = returnDate;
     }
 
-    public String getLoanId() {
-        return loanId;
+    public String getTransactionId() {
+        return transactionId;
     }
 
-    public void setLoadId(String loanId) {
-        this.loanId = loanId;
+    public void setTransactionId(String transactionId) {
+        this.transactionId = transactionId;
     }
 
-    public String getBookId() {
-        return bookId;
+    public Book getBook() {
+        return book;
     }
 
-    public void setBookId(String bookId) {
-        this.bookId = bookId;
+    public void setBook(Book book) {
+        this.book = book;
     }
 
-    public String getUserId() {
-        return userId;
+    public User getUser() {
+        return user;
     }
 
-    public void setUserId(String userId) {
-        this.userId = userId;
+    public void setUser(User user) {
+        this.user = user;
     }
 
     public Date getBorrowDate() {
@@ -69,7 +69,7 @@ public class Loan implements Serializable {
 
     @Override
     public String toString() {
-        return "Loan [loanId=" + loanId + ", bookId=" + bookId
-                + ", userId=" + userId + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + "]";
+        return "Loan [transactionId=" + transactionId + ", book=" + book
+                + ", user=" + user + ", borrowDate=" + borrowDate + ", returnDate=" + returnDate + "]";
     }
 }

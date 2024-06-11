@@ -17,14 +17,16 @@ public class Book implements Serializable {
     private String author;
     private int publicationYear;
     private String publisher;
+    private String ISBN;
     private boolean activeBook;
 
-    public Book(String bookId, String bookTitle, String author, int publicationYear, String publisher, boolean activeBook) {
+    public Book(String bookId, String bookTitle, String author, int publicationYear, String publisher, String ISBN, boolean activeBook) {
         this.bookId = bookId;
         this.bookTitle = bookTitle;
         this.author = author;
         this.publicationYear = publicationYear;
         this.publisher = publisher;
+        this.ISBN = ISBN;
         this.activeBook = activeBook;
     }
 
@@ -68,6 +70,14 @@ public class Book implements Serializable {
         this.publisher = publisher;
     }
 
+    public String getISBN() {
+        return ISBN;
+    }
+
+    public void setISBN(String ISBN) {
+        this.ISBN = ISBN;
+    }
+
     public boolean isActiveBook() {
         return activeBook;
     }
@@ -78,9 +88,9 @@ public class Book implements Serializable {
 
     @Override
     public String toString() {
-        return "Book [bookId=" + bookId + ", title=" + bookTitle + ", author=" + author
+        return "Book [bookId=" + bookId + ", bookTitle=" + bookTitle + ", author=" + author
                 + ", publicationYear=" + publicationYear + ", publisher=" + publisher
-                + ", activeBook=" + activeBook + "]";
+                + ", ISBN=" + ISBN + ", activeBook=" + activeBook + "]";
     }
 
 }
