@@ -4,7 +4,6 @@
  */
 package controller;
 
-import java.util.List;
 import java.util.Map;
 
 /**
@@ -21,5 +20,5 @@ public interface I_Collection<T> {
 
     T getById(String id);
 
-    List<T> getAll();
+    Map<String, T> getAll();
 }

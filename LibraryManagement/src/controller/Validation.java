@@ -47,6 +47,20 @@ public class Validation {
         }
     }
 
+    public String getEmail() {
+        String emailPattern = "^[a-zA-Z0-9]+@fpt.edu.vn$";
+        String input;
+        while (true) {
+            System.out.println("Enter Email: ");
+            input = scanner.nextLine();
+            if (input.matches(emailPattern)) {
+                return input;
+            } else {
+                System.out.println("Error: Invalid email format. Please enter a valid email in the format abcxyz@fpt.edu.vn!!");
+            }
+        }
+    }
+
     public String getStringOrEmpty(String prompt) {
         System.out.println(prompt);
         return scanner.nextLine().trim();

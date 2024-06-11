@@ -16,11 +16,7 @@ import java.util.Map;
  */
 public class BookCollection implements I_Collection<Book> {
 
-    private Map<String, Book> books;
-
-    public BookCollection() {
-        books = new HashMap<>();
-    }
+    private Map<String, Book> books = new HashMap<>();
 
     @Override
     public void add(Book book) {
@@ -29,17 +25,14 @@ public class BookCollection implements I_Collection<Book> {
 
     @Override
     public void update(Book book) {
-        if (books.containsKey(book.getBookId())) {
-            books.put(book.getBookId(), book);
-        }
+        books.put(book.getBookId(), book);
     }
 
     @Override
     public void delete(String id) {
-        if (books.containsKey(id)) {
-            Book book = books.get(id);
+        Book book = books.get(id);
+        if (book != null) {
             book.setActiveBook(false);
-            books.put(id, book);
         }
     }
 
@@ -49,13 +42,7 @@ public class BookCollection implements I_Collection<Book> {
     }
 
     @Override
-    public List<Book> getAll() {
-        List<Book> activeBooks = new ArrayList<>();
-        for (Book book : books.values()) {
-            if (book.isActiveBook()) {
-                activeBooks.add(book);
-            }
-        }
-        return activeBooks;
+    public Map<String, Book> getAll() {
+        return books;
     }
 }

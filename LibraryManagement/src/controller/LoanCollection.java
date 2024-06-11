@@ -4,9 +4,7 @@
  */
 package controller;
 
-import java.util.ArrayList;
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
 import model.Loan;
 
@@ -45,7 +43,7 @@ public class LoanCollection implements I_Collection<Loan> {
     }
 
     @Override
-    public List<Loan> getAll() {
-        return new ArrayList<>(loans.values());
+    public Map<String, Loan> getAll() {
+        return loans;
     }
 }

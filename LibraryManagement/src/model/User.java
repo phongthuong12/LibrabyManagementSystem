@@ -29,7 +29,7 @@ public class User implements Serializable {
         this.activeUser = activeUser;
     }
 
-    public String getStudenId() {
+    public String getStudentId() {
         return studentId;
     }
 
@@ -57,7 +57,7 @@ public class User implements Serializable {
         return phoneNumber;
     }
 
-    public void setPhoneNUmber(String phoneNumber) {
+    public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
 

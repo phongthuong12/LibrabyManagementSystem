@@ -24,28 +24,25 @@ public class UserCollection implements I_Collection<User> {
 
     @Override
     public void add(User user) {
-        users.put(user.getStudenId(), user);
+        users.put(user.getStudentId(), user);
     }
 
     @Override
     public void update(User user) {
-        if (users.containsKey(user.getStudenId())) {
-            users.put(user.getStudenId(), user);
-        }
+        users.put(user.getStudentId(), user);
     }
 
     @Override
     public void delete(String id) {
-        if (users.containsKey(id)) {
-            User user = users.get(id);
-            user.setActiveUser(false);
-            users.put(id, user);
-        }
+        users.remove(id);
     }
 
     @Override
     public User getById(String id) {
-        return users.get(id);
+        if (users.containsKey(id)) {
+            return users.get(id);
+        }
+        return null;
     }
 
     @Override
